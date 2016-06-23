@@ -5,5 +5,8 @@ if [ $NOOFPROJECTS != 1 ]; then
   exit 1
 fi
 
-cd $(find -path ./__MACOSX -prune -o -name '*.xcodeproj' -print | grep -o '\./.*/' | sed 's/\.\///g' | sed 's/\/$//g')
-fastlane init
+PROJPATH=$(find -path ./__MACOSX -prune -o -name '*.xcodeproj' -print | grep -o '\./.*/' | sed 's/\.\///g')
+cp fastlane_expect.sh $PROJPATH
+cd $PROJPATH
+
+#./fastlane_expect.sh
