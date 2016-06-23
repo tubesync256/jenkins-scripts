@@ -9,4 +9,4 @@ PROJPATH=$(find -path ./__MACOSX -prune -o -name '*.xcodeproj' -print | grep -o 
 cp fastlane_expect.sh $PROJPATH
 cd $PROJPATH
 
-#./fastlane_expect.sh
+./fastlane_expect.sh
