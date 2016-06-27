@@ -10,4 +10,4 @@ PROJPATH=$(find . -path ./__MACOSX -prune -o -name '*.xcodeproj' -print | grep -
 cp fastlane_expect.sh $PROJPATH
 cd $PROJPATH
 
-./fastlane_expect.sh
+cp -R /Users/djuretic/Desktop/Jenkins/meta/fastlane .
